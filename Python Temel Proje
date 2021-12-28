@@ -6,6 +6,14 @@ output: [1,'a','cat',2,3,'dog',4,5]
 
 
 Code:
+inp= [[1,'a',['cat'],2],[[[3]],'dog'],4,5]
+def flatten(liste):
+    for i in range(10000):
+        liste = [l for v in liste for l in (v if isinstance(v, list) else [v])]
+    return liste
+    
+flatten(inp)
+
 
 
 
